@@ -42,44 +42,46 @@ namespace Unit1._1
         public static bool PlaceSumTotal (string numberOne, string numberTwo)
             {
             char temp1, temp2;
-            int a1, a2, b1, b2;
+            int a1 =0, a2 =0, b1 =0, b2 =0;
             int digitCount = numberOne.Length;
             string[] numberGroupOne = new string[digitCount];
             string[] numberGroupTwo = new string[digitCount];
 
             for (int i = 0; i < numberOne.Length; i++)
-                {
+            {
                     temp1 = numberOne[i];
                     temp2 = numberTwo[i];
                     numberGroupOne[i] = Convert.ToString(temp1);
                     numberGroupTwo[i] = Convert.ToString(temp2);
             }
-
-            for (int i = 0; i < numberOne.Length; i++)
-            {
-                a1 = Convert.ToInt16(numberGroupOne[i]);
-                a2 = Convert.ToInt16(numberGroupTwo[i]);
-                b1 = //blah blah +1
-                b2 = //blah blah +1
-                if (equalA == equalB && equalB == equalC)
-                    return true;
-                else return false;
-
-            }
-                /*foreach (var item in numberGroupOne)
+            
+                for (int i = 1; i < numberOne.Length; i++)
                 {
+                  
+                    a1 = Convert.ToInt16(numberGroupOne[i - 1]);
+                    b1 = Convert.ToInt16(numberGroupTwo[i - 1]);
+                    a2 = Convert.ToInt16(numberGroupOne[i]);
+                    b2 = Convert.ToInt16(numberGroupTwo[i]);
 
-                Console.WriteLine(item.ToString());
+                    Console.WriteLine(a1);
+                    Console.WriteLine(b1);
+                    Console.WriteLine(a2);
+                    Console.WriteLine(b2);
+
+                    if ((a1 + b1) != (a2 + b2))
+                    {
+                        Console.WriteLine(a1 + b1);
+                        Console.WriteLine(a2 + b2);
+                        Console.WriteLine("false");
+                        return false;
+                    }
 
                 }
-                foreach (var item in numberGroupTwo)
-                {
+            Console.WriteLine("true");
+        return true;
+           
 
-                Console.WriteLine(item.ToString());
-
-                }*/
-
-            }
+        }
                                        
 
          

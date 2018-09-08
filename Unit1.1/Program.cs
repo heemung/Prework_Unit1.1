@@ -10,21 +10,16 @@ namespace Unit1._1
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Please Enter a three digit number: ");
-            var userNumber1 =(Console.ReadLine());
-
-            if (NumberCheck(userNumber1) == true && )
-                Console.WriteLine("Please Enter a 2nd three digit number");
+            Console.WriteLine("Please Enter a number: ");
+                var userNumber1 =(Console.ReadLine());
+            Console.WriteLine("Please Enter a 2nd number matching the digit lenght of the 1st:");
                 var userNumber2 = (Console.ReadLine());
-
-
 
             PlaceSumTotal(userNumber1, userNumber2);
 
-
-            Console.ReadKey();
-
-            // Go to http://aka.ms/dotnet-get-started-console to continue learning how to build a console app! 
+            Console.ReadLine();
+            //if (NumberCheck(userNumber1) == true && )
+            
         }
 
         public static bool NumberCheck(string x)
@@ -38,23 +33,40 @@ namespace Unit1._1
             }
         }
 
-        public static bool IntagerCheck()
+       /* public static bool IntagerCheck()
         {
             return;
         }
-
-        public static string PlaceSumTotal (string numberOne, string numberTwo)
+        */
+        public static bool PlaceSumTotal (string numberOne, string numberTwo)
             {
-            char[] groupOne = numberOne.ToCharArray();
-            char[] groupTwo = numberOne.ToCharArray();
+            char temp1;
+            char temp2;
+            int digitCount = numberOne.Length;
+            string[] numberGroupOne = new string[digitCount];
+            string[] numberGroupTwo = new string[digitCount];
 
-            foreach (char c in groupOne)
+            for (int i = 0; i < numberOne.Length; i++)
+                {
+                    temp1 = numberOne[i];
+                    temp2 = numberTwo[i];
+                    numberGroupOne[i] = Convert.ToString(temp1);
+                    numberGroupTwo[i] = Convert.ToString(temp2);
+            }
 
-                groupOne[] +
-                
+                /*foreach (var item in numberGroupOne)
+                {
 
+                Console.WriteLine(item.ToString());
 
-            return;
+                }
+                foreach (var item in numberGroupTwo)
+                {
+
+                Console.WriteLine(item.ToString());
+
+                }*/
+            return true;
 
             }
                                        

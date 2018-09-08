@@ -16,7 +16,8 @@ namespace Unit1._1
                 var userNumber2 = (Console.ReadLine());
 
             PlaceSumTotal(userNumber1, userNumber2);
-
+           
+            //Console.WriteLine(PlaceSumTotal());
             Console.ReadLine();
             //if (NumberCheck(userNumber1) == true && )
             
@@ -53,7 +54,13 @@ namespace Unit1._1
                     numberGroupOne[i] = Convert.ToString(temp1);
                     numberGroupTwo[i] = Convert.ToString(temp2);
             }
+            return true;
 
+                /*if (equalA == equalB && equalB == equalC)
+                return true;
+            else return false;
+
+            
                 /*foreach (var item in numberGroupOne)
                 {
 
@@ -66,7 +73,6 @@ namespace Unit1._1
                 Console.WriteLine(item.ToString());
 
                 }*/
-            return true;
 
             }
                                        

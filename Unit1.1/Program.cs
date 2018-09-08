@@ -41,8 +41,8 @@ namespace Unit1._1
         */
         public static bool PlaceSumTotal (string numberOne, string numberTwo)
             {
-            char temp1;
-            char temp2;
+            char temp1, temp2;
+            int a1, a2, b1, b2;
             int digitCount = numberOne.Length;
             string[] numberGroupOne = new string[digitCount];
             string[] numberGroupTwo = new string[digitCount];
@@ -54,13 +54,18 @@ namespace Unit1._1
                     numberGroupOne[i] = Convert.ToString(temp1);
                     numberGroupTwo[i] = Convert.ToString(temp2);
             }
-            return true;
 
-                /*if (equalA == equalB && equalB == equalC)
-                return true;
-            else return false;
+            for (int i = 0; i < numberOne.Length; i++)
+            {
+                a1 = Convert.ToInt16(numberGroupOne[i]);
+                a2 = Convert.ToInt16(numberGroupTwo[i]);
+                b1 = //blah blah +1
+                b2 = //blah blah +1
+                if (equalA == equalB && equalB == equalC)
+                    return true;
+                else return false;
 
-            
+            }
                 /*foreach (var item in numberGroupOne)
                 {
 

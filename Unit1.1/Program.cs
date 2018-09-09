@@ -2,6 +2,8 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+//added system.text.regular.expressions to keep .net 2.0 compat.
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 
 namespace Unit1._1
@@ -10,14 +12,33 @@ namespace Unit1._1
     {
         static void Main(string[] args)
         {
-           bool numberCheck = true;
-           string userNumber1, userNumber2 = "0";
+            Console.WriteLine("This program will add each digit of two numbers and " +
+                "compare each sum of two digits to see if they equal each other. \n");
+            //setting bools to start while loop
+           bool numberCheck = true, isNumber = true;
+
+            // initializing strings value because when initializing in while loop 
+            //bool answer = PlaceSumTotal(userNumber1, userNumber2); wont complie 
+            //unk reason.
+            string userNumber1 = "0", userNumber2 = "0";
 
 
-           // while (userListens)
-            Console.WriteLine("Please input a number: ");
-                userNumber1 =(Console.ReadLine());
-            //if(userNumber1 )
+            while (isNumber)
+            {
+                Console.WriteLine("Please input a 1+ digit number: ");
+                userNumber1 = (Console.ReadLine());
+
+                if (IsNumberMethod(userNumber1) == true)
+                {
+                    isNumber = false;
+                }
+                else
+                {
+                    Console.WriteLine("The input must contain only digits. example" +
+                        "0123456789.");
+                }
+            }
+
             while (numberCheck)
             {
                 Console.WriteLine("Please input a second number matching the digit length" +
@@ -36,32 +57,23 @@ namespace Unit1._1
                         }
             }
 
+            //passing user inputs after checks into methood
            bool answer = PlaceSumTotal(userNumber1, userNumber2);
             
+            //takes the answer bool from the return of the method and writes the answer for the user.
             Console.WriteLine("The answer is " + answer);
-            Console.ReadLine();
-            //if (NumberCheck(userNumber1) == true && )
-            
+            Console.ReadLine();     
         }
 
-      /*  public static bool NumberCheck(string x)
+      public static bool IsNumberMethod(string x)
         {
-            var testLenght = x.Length;
-            if (testLenght > 0 && testLenght < 4)
-                return true;
-            else
-            {
-                return false;
-            }
-        }*/
-
-       /* public static bool IntagerCheck()
-        {
-            return;
+           bool isNumber = long.TryParse(x, out long n);
+           //Console.WriteLine("'{0}' --> {1}", x, n);
+            return isNumber;
         }
-        */
+
         public static bool PlaceSumTotal (string numberOne, string numberTwo)
-            {
+         {
             char temp1, temp2;
             int a1 =0, a2 =0, b1 =0, b2 =0;
             int digitCount = numberOne.Length;
@@ -105,7 +117,7 @@ namespace Unit1._1
         return true;
            
 
-        }
+          }
                                        
 
          

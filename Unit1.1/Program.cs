@@ -1,8 +1,6 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-//added system.text.regular.expressions to keep .net 2.0 compat.
 using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 
@@ -28,14 +26,14 @@ namespace Unit1._1
                 Console.WriteLine("Please input a 1+ digit number: ");
                 userNumber1 = (Console.ReadLine());
 
-                if (IsNumberMethod(userNumber1) == true)
+                if ((IsNumberMethod(userNumber1) == true) && (userNumber1.Length > 1))
                 {
                     isNumber = false;
                 }
                 else
                 {
-                    Console.WriteLine("The input must contain only digits. example" +
-                        "0123456789.");
+                    Console.WriteLine("The input must contain only digits. example " +
+                        "0123456789. \n");
                 }
             }
 
@@ -45,15 +43,15 @@ namespace Unit1._1
                     " of the first number: ");
                  userNumber2 = (Console.ReadLine());
 
-                    if (userNumber2.Length != userNumber1.Length)
-                    {
-                        Console.WriteLine("The second number length must match the first number " +
-                        "length of " + userNumber1.Length + " digits");
-                    
-                    }
-                        else
+                    if ((userNumber2.Length == userNumber1.Length) 
+                    && (IsNumberMethod(userNumber2) == true))
                         {
                             numberCheck = false;
+                        }
+                        else
+                        {
+                            Console.WriteLine("The second number length must match the first " +
+                            "number " + "length of " + userNumber1.Length + " digits \n");
                         }
             }
 
@@ -67,9 +65,9 @@ namespace Unit1._1
 
       public static bool IsNumberMethod(string x)
         {
-           bool isNumber = long.TryParse(x, out long n);
+           bool isNumberTemp = long.TryParse(x, out long n);
            //Console.WriteLine("'{0}' --> {1}", x, n);
-            return isNumber;
+            return isNumberTemp;
         }
 
         public static bool PlaceSumTotal (string numberOne, string numberTwo)

@@ -15,9 +15,9 @@ namespace Unit1._1
             Console.WriteLine("Please Enter a 2nd number matching the digit lenght of the 1st:");
                 var userNumber2 = (Console.ReadLine());
 
-            PlaceSumTotal(userNumber1, userNumber2);
-           
-            //Console.WriteLine(PlaceSumTotal());
+           bool answer = PlaceSumTotal(userNumber1, userNumber2);
+            
+            Console.WriteLine("The answer is " + answer);
             Console.ReadLine();
             //if (NumberCheck(userNumber1) == true && )
             

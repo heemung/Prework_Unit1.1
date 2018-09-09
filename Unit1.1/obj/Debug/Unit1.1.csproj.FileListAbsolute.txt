@@ -1,0 +1,7 @@
+C:\Users\Clayton\Source\Repos\Prework_Unit1.1\Unit1.1\bin\Debug\Unit1.1.exe.config
+C:\Users\Clayton\Source\Repos\Prework_Unit1.1\Unit1.1\bin\Debug\Unit1.1.exe
+C:\Users\Clayton\Source\Repos\Prework_Unit1.1\Unit1.1\bin\Debug\Unit1.1.pdb
+C:\Users\Clayton\Source\Repos\Prework_Unit1.1\Unit1.1\obj\Debug\Unit1.1.csprojAssemblyReference.cache
+C:\Users\Clayton\Source\Repos\Prework_Unit1.1\Unit1.1\obj\Debug\Unit1.1.csproj.CoreCompileInputs.cache
+C:\Users\Clayton\Source\Repos\Prework_Unit1.1\Unit1.1\obj\Debug\Unit1.1.exe
+C:\Users\Clayton\Source\Repos\Prework_Unit1.1\Unit1.1\obj\Debug\Unit1.1.pdb

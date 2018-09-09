@@ -63,20 +63,23 @@ namespace Unit1._1
                     a2 = Convert.ToInt16(numberGroupOne[i]);
                     b2 = Convert.ToInt16(numberGroupTwo[i]);
 
-                    Console.WriteLine(a1);
+                //testing numberGroupOne and Two array convert inputs
+                    /*Console.WriteLine(a1);
                     Console.WriteLine(b1);
                     Console.WriteLine(a2);
-                    Console.WriteLine(b2);
+                    Console.WriteLine(b2);*/
 
                     if ((a1 + b1) != (a2 + b2))
                     {
-                        Console.WriteLine(a1 + b1);
-                        Console.WriteLine(a2 + b2);
+                        Console.WriteLine("digit 1 nummber, " + i + " cycle, Equals " + (a1 + b1));
+                        Console.WriteLine("digit 2 nummber, " + i + " cycle, Equals " + (a2 + b2));
                         Console.WriteLine("false");
-                        return false;
+                            return false;
                     }
+                Console.WriteLine("digit 1 nummber, " +i + " cycle, Equals " + (a1 + b1));
+                Console.WriteLine("digit 2 nummber, " +i + " cycle, Equals " + (a2 + b2));
+            }
 
-                }
             Console.WriteLine("true");
         return true;
            

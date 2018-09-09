@@ -10,10 +10,31 @@ namespace Unit1._1
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Please Enter a number: ");
-                var userNumber1 =(Console.ReadLine());
-            Console.WriteLine("Please Enter a 2nd number matching the digit lenght of the 1st:");
-                var userNumber2 = (Console.ReadLine());
+           bool numberCheck = true;
+           string userNumber1, userNumber2 = "0";
+
+
+           // while (userListens)
+            Console.WriteLine("Please input a number: ");
+                userNumber1 =(Console.ReadLine());
+            //if(userNumber1 )
+            while (numberCheck)
+            {
+                Console.WriteLine("Please input a second number matching the digit length" +
+                    " of the first number: ");
+                 userNumber2 = (Console.ReadLine());
+
+                    if (userNumber2.Length != userNumber1.Length)
+                    {
+                        Console.WriteLine("The second number length must match the first number " +
+                        "length of " + userNumber1.Length + " digits");
+                    
+                    }
+                        else
+                        {
+                            numberCheck = false;
+                        }
+            }
 
            bool answer = PlaceSumTotal(userNumber1, userNumber2);
             
@@ -23,7 +44,7 @@ namespace Unit1._1
             
         }
 
-        public static bool NumberCheck(string x)
+      /*  public static bool NumberCheck(string x)
         {
             var testLenght = x.Length;
             if (testLenght > 0 && testLenght < 4)
@@ -32,7 +53,7 @@ namespace Unit1._1
             {
                 return false;
             }
-        }
+        }*/
 
        /* public static bool IntagerCheck()
         {
